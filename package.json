@@ -1,0 +1,14 @@
+{
+  "name": "itech660lab2",
+  "version": "1.0.0",
+  "description": "ITEC 660 Lab 2",
+  "main": "weatherapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Swanger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
