@@ -18,7 +18,7 @@ app.get("/", function(req,res) {
 app.post("/", function(request,response) {
 
   //Get the weather data
-  const req = unirest("GET", "https://community-open-weather-map.p.rapidapi.com/weather");
+  const req = unirest("GET", "api.openweathermap.org ");
 
   let city = request.body.city;
   // city = city + ", USA"  //Add country if needed
@@ -31,8 +31,8 @@ app.post("/", function(request,response) {
 
 // Update your API keys
   req.headers({
-    "x-rapidapi-key": "b0ecde0aa7msh4000c55386b3d0ap1a619djsn5b8ac1b1b077",
-    "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+    "x-rapidapi-key": "eef09ac44ae73de852bca91ffeac61e5",
+    "x-rapidapi-host": "api.openweathermap.org",
     "useQueryString": true
   });
 
