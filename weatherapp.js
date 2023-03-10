@@ -18,9 +18,7 @@ app.get("/", function(req,res) {
 app.post("/", function(request,response) {
 
   //Get the weather data
-  const req = unirest("Get","http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid=eef09ac44ae73de852bca91ffeac61e5")
-
-  //const req = unirest("GET", "https://api.openweathermap.org ");
+  const req = unirest("GET", "https://community-open-weather-map.p.rapidapi.com/weather");
 
   let city = request.body.city;
   // city = city + ", USA"  //Add country if needed
@@ -33,23 +31,27 @@ app.post("/", function(request,response) {
 
 // Update your API keys
   req.headers({
-    "x-rapidapi-key": "eef09ac44ae73de852bca91ffeac61e5",
-    "x-rapidapi-host": "https://api.openweathermap.org",
+    "x-rapidapi-key": '8cbad62b31msh24b3ad48bf2ddd6p16d0cajsn490b5339aba7',
+    "x-rapidapi-host": 'openweather43.p.rapidapi.com',
     "useQueryString": true
   });
 
 
   req.end(function (res) {
     if (res.error) throw new Error(res.error);
-    response.send(res.body); //Update
+    //console.log(res.body)
+    let results = res.body
+    let working = results.main
+    let temp = working.temp
+    let feelslike = working.feels_like
+    console.log(results)
+    console.log(temp)
+    console.log(feelslike)
+    response.send('<p>${temp}, ${feelslike}</p>'); //Update
   });
 
 
 });
 
-//let port = process.env.PORT || 8002;
-//app.listen(port, function() {
-    //console.log ("Server running on port 8002");
-//})
-app.listen(8002)
 
+app.listen(3000)
