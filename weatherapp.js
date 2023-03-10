@@ -18,7 +18,9 @@ app.get("/", function(req,res) {
 app.post("/", function(request,response) {
 
   //Get the weather data
-  const req = unirest("GET", "https://api.openweathermap.org ");
+  const req = unirest("Get","http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid=eef09ac44ae73de852bca91ffeac61e5")
+
+  //const req = unirest("GET", "https://api.openweathermap.org ");
 
   let city = request.body.city;
   // city = city + ", USA"  //Add country if needed
