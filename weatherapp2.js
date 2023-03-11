@@ -41,13 +41,15 @@ app.post("/", function(request,response) {
     if (res.error) throw new Error(res.error);
     //console.log(res.body)
     let results = res.body
+    let resultcity = res.body.location.name
+    let resultstate = res.body.location.region
     let working = results.current
     let temp = working.temp_f
     //let feelslike = working.feels_like
     console.log(results)
     console.log(temp)
     //console.log(feelslike)
-    response.send({temp}); //Update
+    response.send("The current temp in "+ resultcity + " , "+ resultstate + " is  " + temp + " degrees Farenheit")
   });
 
 
