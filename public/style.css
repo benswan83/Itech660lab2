@@ -1,11 +1,39 @@
 /* update this file */
 body {
-  background-color: lightyellow;
+  background-color: rgb(46, 46, 46);
   text-align: center;
 }
 h1 {
-  color: blue;
+  color: rgb(109, 109, 240);
 }
 p {
-  color: red;
+  color: rgb(232, 232, 232);
+}
+div.search{
+  border-style: none;
+}
+div.result{
+  background-color: rgb(46, 46, 46);
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(85, 84, 84);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(232, 232, 232);
+  font-size: large;
+  float: left
+}
+
+div.other{
+  background-color: rgb(46, 46, 46);
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(85, 84, 84);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(232, 232, 232);
+  font-size: medium;
+  float: right;
+}
+
+img{
+  float: right;
 }

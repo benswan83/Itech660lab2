@@ -32,5 +32,11 @@ npm init
     1. Submit your heroku link in the github repository read.me file.
 10. Update the **readme file** by answering the following questions:
     1. Assume that in your API call you received a 401 status code. Which part of your code most probably is not correct?
+
+    The 401 status means that there is an unauthorized call to the api.  In order to fix this, you would first start with the code that includes the api key.  In the weatherapp code, this would be the section of the code with that starts on line 33 with x-rapidapi-host.
+
     2. Explain your design choices and how you used CSS to realize those changes.
+
+    I kept my design very simple.  I changed the background to a grey instead of the light yellow.  I also changed the font to Arial, as I think that looks better.  On the results page, I seperated the main temperature from the other results using the float left and float right on the div tags.  I used CSS to make these changes so that all design elements were included in one file.
+    
 11. Submit your repository via github.
